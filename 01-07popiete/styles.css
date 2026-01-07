@@ -1,5 +1,5 @@
 #cryptos-wrapper {
-    width: 600px;
+    width: 700px;
     height: auto;
     padding: 2rem 3rem;
 
@@ -14,9 +14,11 @@
 .crypto-wrapper {
     width: 100%;
     height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 6fr 1fr 2fr;
+    justify-content: end;
+    align-content: center;
+    gap: 2rem;
 
     padding: 2rem 2rem;
 
@@ -29,4 +31,21 @@
 
 .silverBorder {
     border-color: silver;
+}
+
+.title {
+    vertical-align: middle;
+}
+
+.logo-wrapper {
+    width: 4rem;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.currPrice {
+    text-align: end;
 }

@@ -13,7 +13,7 @@ const buildScreen = async () => {
 
     console.log(sortedCryptos);
 
-    sortedCryptos.forEach((crypto, index) => {
+    sortedCryptos.forEach((crypto) => {
         const card = document.createElement("div");
 
         const borderColor = `${
@@ -25,11 +25,17 @@ const buildScreen = async () => {
         title.classList.add("title");
         title.innerText = crypto.name;
 
+        const logo = document.createElement("div");
+        logo.classList.add("logo-wrapper");
+        const logoImage = document.createElement("img");
+        logoImage.src = crypto.image;
+
         const currPrice = document.createElement("h2");
         currPrice.classList.add("currPrice");
         currPrice.innerText = `$${Number(crypto.current_price).toFixed(6)}`;
 
-        card.append(title, currPrice);
+        card.append(title, logo, currPrice);
+        logo.append(logoImage);
 
         cryptosWrapper.append(card);
     });
