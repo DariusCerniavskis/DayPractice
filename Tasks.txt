@@ -1,0 +1,9 @@
+TASKS
+1. Susikonfiguruot mockAPI, susikurt duomenų modelį recipes;
+2. recipes turi turėt properties: title, description, instructions, ingredients(naudot string, ne array), recipe_img;
+3. Thunder client pagalba įdėt 2-3 receptus;
+ 
+4. Susikurti savo projekto wireframe;
+5. Susikurti pagrindinį puslapį kur visi item'ai yra atvaizduojami kortelėse.
+6. Receptus atvaizduoti kortelėse;
+ 
