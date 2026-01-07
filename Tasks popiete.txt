@@ -1,0 +1,14 @@
+1. Naudojantis coin api dokumentacija parfetchint kriptovaliutas. Jų kainos turi būt atvaizduotos "usd"; (veiksmą atlikt per thunder client);
+2. Tą patį veiksmą atlikt naudojant JS, gautus duomenis išvest consolėj;
+ 
+// https://api.coincap.io/v2/assets
+// https://api.spacexdata.com/v4/launches
+3. Turimas valiutas atvaizduoti į puslapį, kiekvienai kriptovaliutai sukurti kortelę kurioje turi būt: 
+- Kriptovaliutos pavadinimas;
+- Dabartinė kainą;
+4. Paspaudus ant kriptovaliutos kortelės - consolėj turi būt atvaizduotas tos kriptovaliutos pavadinimas;
+5. Jeigu kriptovaliutos vieneto kaina yra didesnė uz 100eur - kriptovaliutos border turi būt auksinės spalvos, jei pigenė už 100, sidabrinės spalvos;
+6. Prieš atvaizduojant kriptovaliutas - jas išrikiuot abecelės tvarka;
+ 
+7. Peržiūrėti 3 kodus bei pasifalint savuoju
+ 
