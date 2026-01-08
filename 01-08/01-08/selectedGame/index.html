@@ -4,15 +4,21 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./selectedGame.css" />
     </head>
     <body>
-        <header>
-            <div class="header-wrapper"></div>
-        </header>
-
-        <div id="top-games-wrapper"></div>
-
-        <script src="./script.js"></script>
+        <div class="page-wrapper">
+            <div id="top-games-wrapper">
+                <div class="header-wrapper">
+                    <h2>Game in more detail</h2>
+                    <div class="del-nav-wrapper">
+                        <button id="tempDelete">Delete from list</button>
+                        <button id="restore">Restore</button>
+                        <button id="totalyDelete">Totaly Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./selectedGame.js"></script>
     </body>
 </html>

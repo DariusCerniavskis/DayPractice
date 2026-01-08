@@ -1,7 +1,11 @@
 const topGamesWrapper = document.getElementById("top-games-wrapper");
 const newGame = document.getElementById("newGame");
+const deletedFromList = document.getElementById("check-temp-deleted");
+const deletedFromListSpan = document.getElementById("span-temp-deleted");
 
-const buildScreen = async () => {
+let isGameDeletedFromList = false;
+
+const buildScreen = async (isTempDeleted) => {
     const response = await fetch(
         "https://695e14ac2556fd22f6773e58.mockapi.io/topGames"
     );
@@ -10,9 +14,17 @@ const buildScreen = async () => {
     console.log(topGames);
 
     topGames.forEach((game) => {
-        if (!game.isDeleted) {
-            const card = document.createElement("div");
+        if (!isGameDeletedFromList) {
+            isGameDeletedFromList = game.isDeleted;
+        } else {
+            deletedFromList.textContent = "true";
+        }
+
+        if (isTempDeleted == game.isDeleted) {
+            const card = document.createElement("a");
             card.classList.add("card");
+            const link = `./selectedGame/index.html?id=${game.id}`;
+            card.href = link;
 
             const image = document.createElement("img");
             image.classList.add("image");
@@ -41,16 +53,21 @@ const buildScreen = async () => {
             realiseAndPlatforms.append(realiseDate, platforms);
 
             topGamesWrapper.append(card);
-
-            // More detail
-            card.addEventListener("Click", () => {
-                console.log(game.name);
-            });
         }
     });
 };
 
-buildScreen();
+const checkboxShow = () => {
+    const dispalyStatus = isGameDeletedFromList ? "flex" : "none";
+    deletedFromList.style.display = dispalyStatus;
+    deletedFromListSpan.style.display = dispalyStatus;
+};
+
+// initialization
+checkboxShow();
+
+buildScreen(false);
+checkboxShow();
 
 newGame.addEventListener("click", () => {
     // got to new

@@ -38,6 +38,10 @@ const buildScreen = async () => {
         logo.append(logoImage);
 
         cryptosWrapper.append(card);
+
+        card.addEventListener("click", () => {
+            console.log(title);
+        });
     });
 };
 

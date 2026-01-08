@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "D:/Front-endDayPractice/01-08/01-08/index.html",
+            "url": "D:/Front-endDayPractice/01-07/01-07popiete/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
