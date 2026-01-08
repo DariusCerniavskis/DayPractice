@@ -3,8 +3,6 @@ const newGame = document.getElementById("newGame");
 const deletedFromList = document.getElementById("check-temp-deleted");
 const deletedFromListSpan = document.getElementById("span-temp-deleted");
 
-let isGameDeletedFromList = false;
-
 const buildScreen = async (isTempDeleted) => {
     const response = await fetch(
         "https://695e14ac2556fd22f6773e58.mockapi.io/topGames"
@@ -14,8 +12,8 @@ const buildScreen = async (isTempDeleted) => {
     console.log(topGames);
 
     topGames.forEach((game) => {
-        if (!isGameDeletedFromList) {
-            isGameDeletedFromList = game.isDeleted;
+        if (!isTempDeleted) {
+            isTempDeleted = game.isDeleted;
         } else {
             deletedFromList.textContent = "true";
         }
@@ -58,10 +56,12 @@ const buildScreen = async (isTempDeleted) => {
 };
 
 const checkboxShow = () => {
-    const dispalyStatus = isGameDeletedFromList ? "flex" : "none";
+    const dispalyStatus = isTempDeleted ? "flex" : "none";
     deletedFromList.style.display = dispalyStatus;
     deletedFromListSpan.style.display = dispalyStatus;
 };
+
+let isTempDeleted = false;
 
 // initialization
 checkboxShow();

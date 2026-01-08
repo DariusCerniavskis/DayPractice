@@ -27,6 +27,8 @@
     height: 3rem;
     padding: 0.3rem 0.6rem;
 
+    position: relative;
+
     flex: 1;
 
     font-size: 1rem;
@@ -46,6 +48,10 @@
 
 #totalyDelete {
     background-color: red;
+}
+
+#exit {
+    background-color: black;
 }
 
 #top-games-wrapper {
@@ -101,4 +107,33 @@
     padding: 2rem 0;
 
     text-align: justify;
+}
+
+#confirmation-wrapper {
+    width: 200px;
+    height: 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    left: 100px;
+
+    padding: 0.5rem;
+    position: absolute;
+    background-color: rgb(231, 233, 122);
+    border: 1px solid black;
+}
+
+.confirm-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#yes-button,
+#no-button {
+    height: 2rem;
+    padding: 0.2rem 0.3rem;
+    background-color: grey;
 }
